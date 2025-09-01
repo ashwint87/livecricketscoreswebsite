@@ -1,0 +1,164 @@
+.top5-container {
+  padding: 20px;
+  color: white;
+  position: relative;
+}
+
+.see-all-btn-floating {
+  margin-top: 42px;
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  background: #00cfff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.see-all-btn-floating:hover {
+  background: #ffffff;
+  color: #00cfff;
+  border: 1px solid #00cfff;
+}
+
+.rankings-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: black;
+  text-align: center;
+}
+
+.top5-no-data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 280px; /* Adjust height to match the cards visually */
+  text-align: center;
+  color: black;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 14px;
+}
+
+.top5-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.top5-tab {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 999px;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.top5-tab.active {
+  background: #ef4444;
+  color: white;
+}
+
+.top5-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.top5-card {
+  border-radius: 20px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: black;
+}
+
+.top5-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.top5-format {
+  background: #ef4444;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.top5-top5-label {
+  color: #d1d5db;
+  font-weight: 700;
+}
+
+.top5-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.top5-team-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.top5-rank {
+  font-weight: 700;
+  font-size: 16px;
+  width: 20px;
+}
+
+.top5-team-info {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 8px;
+  padding-left: 12px;
+}
+
+.top5-flag {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: white;
+}
+
+.top5-team-name {
+  font-weight: 700;
+}
+
+.top5-team-code {
+  color: #a1a1aa;
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+.top5-rating {
+  font-weight: 700;
+  font-size: 15px;
+  text-align: right;
+  min-width: 40px;
+}
+
+.top5-updated {
+  margin-top: 14px;
+  font-size: 12px;
+  text-align: right;
+  color: #d1d5db;
+}

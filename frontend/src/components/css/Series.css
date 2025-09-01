@@ -1,0 +1,172 @@
+/* ===== Month | Series Name table layout ===== */
+
+/* wrapper */
+.series-searchbar {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 0 20px 0;
+}
+
+/* the input (keeps your original .series-search too) */
+.series-search-input {
+  width: 100%;
+  padding: 12px 44px 12px 44px; /* room for icon + clear */
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #111827;
+  font-size: 15px;
+  transition: box-shadow 160ms ease, border-color 160ms ease, background 160ms ease;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+.series-search-input::placeholder {
+  color: #9ca3af;
+}
+
+.series-search-input:focus {
+  outline: none;
+  border-color: #4f46e5;               /* indigo */
+  box-shadow: 0 0 0 4px rgba(79,70,229,0.12);
+  background: #fff;
+}
+
+/* search icon */
+.search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  pointer-events: none;
+}
+
+/* Clear (×) button */
+.clear-btn {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border: none;
+  border-radius: 9999px;
+  background: #f3f4f6;
+  color: #6b7280;
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease, transform 80ms ease;
+}
+
+.clear-btn:hover {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.clear-btn:active {
+  transform: translateY(-50%) scale(0.96);
+}
+
+/* Optional dark mode */
+@media (prefers-color-scheme: dark) {
+  .series-search-input {
+    background: #0b0f14;
+    color: #e5e7eb;
+    border-color: #253043;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
+  }
+  .series-search-input::placeholder { color: #6b7280; }
+  .series-search-input:focus {
+    border-color: #7c9cff;
+    box-shadow: 0 0 0 4px rgba(124,156,255,0.18);
+  }
+  .search-icon { color: #728197; }
+  .clear-btn { background: #111827; color: #9ca3af; }
+  .clear-btn:hover { background: #1f2937; color: #e5e7eb; }
+}
+
+
+.series-table {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  row-gap: 0;
+  border-top: 1px solid #e6e6e6;
+  border-left: 1px solid transparent; /* keeps layout consistent */
+}
+
+.series-table-row {
+  display: contents; /* lets children become the grid cells */
+}
+
+/* Header */
+.series-table-head > .series-col-month,
+.series-table-head > .series-col-name {
+  background: #f2f2f2;
+  font-weight: 700;
+  padding: 10px 12px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+/* Cells */
+.series-col-month,
+.series-col-name {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Month column */
+.series-col-month {
+  font-weight: 700;
+  color: #333;
+  white-space: nowrap;
+}
+
+/* Link/content on the right */
+.series-row-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-right: 1px solid transparent; /* align with header look */
+}
+
+.series-row-title {
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.series-row-dates {
+  font-size: 13px;
+  color: #666;
+}
+
+/* Hover effect for the whole row (right cell) */
+.series-col-name:hover .series-row-title {
+  text-decoration: underline;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 720px) {
+  .series-table {
+    grid-template-columns: 140px 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .series-table {
+    grid-template-columns: 1fr; /* stack */
+  }
+  .series-table-head {
+    display: none; /* hide header and rely on month labels */
+  }
+  .series-col-month {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .series-col-name {
+    padding-top: 6px;
+  }
+}

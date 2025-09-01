@@ -1,0 +1,218 @@
+:root {
+  --rk-bg: #0f1012;
+  --rk-card: #17191d;
+  --rk-card-2: #1d2026;
+  --rk-text: #e8ecf3;
+  --rk-text-dim: #aeb6c3;
+  --rk-accent: #ef4444; /* used for the top-left chip */
+  --rk-border: #2b2f36;
+  --rk-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+html.light :root {
+  --rk-bg: #ffffff;
+  --rk-card: #ffffff;
+  --rk-card-2: #f6f7fb;
+  --rk-text: #0f1320;
+  --rk-text-dim: #5a6480;
+  --rk-accent: #d92d20;
+  --rk-border: #e6e8ef;
+  --rk-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.rk-wrap {
+  padding: 16px;
+  color: var(--rk-text);
+  background: var(--rk-bg);
+}
+
+.rk-head {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.rk-tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.rk-tabs--formats .rk-tab {
+  font-variant: all-small-caps;
+  letter-spacing: 0.5px;
+}
+
+.rk-tab {
+  background: var(--rk-card-2);
+  color: var(--rk-text);
+  border: 1px solid var(--rk-border);
+  padding: 8px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.rk-tab.is-active {
+  background: var(--rk-card);
+  box-shadow: var(--rk-shadow);
+}
+
+.rk-state {
+  padding: 24px;
+  text-align: center;
+  color: var(--rk-text-dim);
+}
+.rk-error { color: #ff7171; }
+
+.rk-banner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 16px;
+  align-items: center;
+  background: linear-gradient(180deg, var(--rk-card) 0%, var(--rk-card-2) 100%);
+  border: 1px solid var(--rk-border);
+  border-radius: 20px;
+  padding: 14px;
+  box-shadow: var(--rk-shadow);
+  margin-bottom: 18px;
+}
+
+.rk-banner-media {
+  position: relative;
+  aspect-ratio: 1/1;
+  width: 100%;
+  background: var(--rk-card-2);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--rk-border);
+  display: grid;
+  place-items: center;
+}
+.rk-banner-media img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 12px rgba(0,0,0,0.35));
+}
+.rk-fallback {
+  width: 76%;
+  height: 76%;
+  background: var(--rk-border);
+  border-radius: 50%;
+}
+
+.rk-format-chip {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--rk-accent);
+  color: #fff;
+  font-weight: 800;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  box-shadow: var(--rk-shadow);
+}
+
+.rk-banner-body {
+  display: grid;
+  gap: 6px;
+}
+.rk-banner-title {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+.rk-no1 {
+  color: var(--rk-accent);
+  margin-right: 6px;
+}
+.rk-banner-sub {
+  color: var(--rk-text-dim);
+  font-weight: 600;
+}
+
+.rk-section-title {
+  margin: 8px 2px 10px;
+  font-weight: 800;
+  letter-spacing: 0.25px;
+  color: var(--rk-text);
+}
+
+.rk-table {
+  border: 1px solid var(--rk-border);
+  background: var(--rk-card);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--rk-shadow);
+}
+
+.rk-thead,
+.rk-row {
+  display: grid;
+  grid-template-columns: 56px 1fr 90px 90px 100px;
+  gap: 0;
+  align-items: center;
+}
+
+.rk-thead {
+  background: var(--rk-card-2);
+  font-weight: 700;
+  padding: 12px 14px;
+  color: var(--rk-text-dim);
+  border-bottom: 1px solid var(--rk-border);
+}
+
+.rk-tbody .rk-row {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--rk-border);
+}
+.rk-tbody .rk-row:last-child {
+  border-bottom: none;
+}
+
+.rk-pos {
+  font-weight: 800;
+  color: var(--rk-text);
+}
+
+.rk-teamcell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rk-crest {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+.rk-crest--placeholder {
+  background: var(--rk-border);
+  border-radius: 50%;
+}
+
+.rk-teamname {
+  font-weight: 700;
+}
+.rk-teamcode {
+  color: var(--rk-text-dim);
+  margin-left: 6px;
+  font-weight: 600;
+}
+
+.rk-right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.rk-meta {
+  display: flex;
+  justify-content: space-between;
+  color: var(--rk-text-dim);
+  font-size: 13px;
+  margin-top: 14px;
+}

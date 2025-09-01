@@ -1,0 +1,135 @@
+/* ========== Container & Header ========== */
+.player-details {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.player-header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.player-header img {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* ========== Tabs ========== */
+.stat-tabs {
+  display: inline-flex;
+  gap: 8px;
+  margin: 10px 0 16px;
+  border-radius: 8px;
+  background: #f5f5f5;
+  padding: 6px;
+}
+
+.stat-tabs button {
+  appearance: none;
+  border: none;
+  background: transparent;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #333;
+}
+
+.stat-tabs button:hover {
+  background: #e8e8e8;
+}
+
+.stat-tabs button.active {
+  background: #d91c1c; /* your brand red */
+  color: #fff;
+}
+
+/* ========== Format sections ========== */
+.career-section {
+  margin-top: 10px;
+}
+
+.videos-section {
+  margin-top: 10px;
+  display: flex;
+}
+
+.format-section + .format-section {
+  margin-top: 18px;
+}
+
+.format-section h4 {
+  margin: 12px 0 6px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #222;
+}
+
+/* ========== Tables ========== */
+.career-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 8px 0 18px;
+  table-layout: fixed; /* keeps columns neat */
+}
+
+.career-table th,
+.career-table td {
+  border: 1px solid #ddd;
+  padding: 8px 10px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.career-table th {
+  background-color: #f7f7f7;
+  font-weight: 700;
+}
+
+.career-table .num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* subtle zebra rows for readability */
+.career-table tbody tr:nth-child(odd) {
+  background: #fafafa;
+}
+
+/* ========== Responsive tweaks ========== */
+@media (max-width: 640px) {
+  .player-header {
+    align-items: flex-start;
+  }
+
+  .player-header img {
+    width: 96px;
+    height: 96px;
+  }
+
+  .stat-tabs {
+    width: 100%;
+    justify-content: space-between;
+    padding: 6px;
+  }
+
+  .career-table th,
+  .career-table td {
+    padding: 6px 8px;
+    font-size: 13px;
+  }
+}
+
+.career-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
